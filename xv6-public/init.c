@@ -20,14 +20,21 @@ main(void)
   dup(0);  // stderr
 
   for(;;){
-    printf(1, "init: starting sh\n");
+    printf(1, "Bienvenido! \n"); //3. cambiar mensaje de arranque.
     pid = fork();
     if(pid < 0){
       printf(1, "init: fork failed\n");
       exit();
     }
     if(pid == 0){
-      exec("sh", argv);
+		
+     exec("sh", argv); //3. Regresarlo con "sh"
+		//1. Remplazar "sh" por "ls". explicar lo que pasa
+		// Se queda en un loop infinito imprimiendo el directorio
+		//exec("ls", argv);
+		//2. Remplasar "ls" por "nohayprograma" explicar lo que pasa
+		// Se queda en un loop marcando error cuando no encuentra ese programa 
+		//exec("nohayprograma", argv);
       printf(1, "init: exec sh failed\n");
       exit();
     }
