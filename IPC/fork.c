@@ -31,7 +31,7 @@ int main(){
             printf("Trabajando \n");
             sleep(1);
         }
-        printf("Terminando\n");
+        printf("Termino\n");
     }
     
     return 0;
