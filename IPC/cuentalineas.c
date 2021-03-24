@@ -4,7 +4,6 @@
 int main(){
     int count = 1;
     char minC;
-    char mayC;
     while(read(0,&minC,1)){
         if (minC == '\n'){
             count++;
