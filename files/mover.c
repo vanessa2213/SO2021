@@ -26,8 +26,8 @@ int main(int argvnum, char **argv){
                 }
                 if(S_ISDIR(sb2.st_mode)){       //si el archivo 2 es un directorio
                     printf("Archivo 2 es un directorio \n");
-                    link(arch2, arch1);         //mover el archivo 1 al directorio
-                    //unlink(arch1);              //borrar el archivo del directorio original
+                    link(arch1, arch2);         //mover el archivo 1 al directorio
+                    unlink(arch1);              //borrar el archivo del directorio original
                 } 
             }
         }
