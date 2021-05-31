@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
                     printf("%s %s %d %d \n", newstudent.name,newstudent.lastname,newstudent.id,newstudent.semestre);
                 }
                 else{
-                    printf("Error: no se encontró el semestre en el alumno %d\n", i);
+                    printf("Error: no se encontró el id en el alumno %d\n", i);
                 }
             } 
             else{
